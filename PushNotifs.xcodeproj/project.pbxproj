@@ -20,6 +20,7 @@
 		0FE89F43DB29225489A6A866 /* Pods_PushNotifs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PushNotifs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46FCAD5421E79254B51FB7A3 /* Pods-PushNotifs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PushNotifs.release.xcconfig"; path = "Pods/Target Support Files/Pods-PushNotifs/Pods-PushNotifs.release.xcconfig"; sourceTree = "<group>"; };
 		61E0A8886DB9240DAAD76D12 /* Pods-PushNotifs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PushNotifs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PushNotifs/Pods-PushNotifs.debug.xcconfig"; sourceTree = "<group>"; };
+		A888F0D61E21BCEF002383DC /* PushNotifs.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PushNotifs.entitlements; sourceTree = "<group>"; };
 		A8EB87211E21B2E200A3075D /* PushNotifs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushNotifs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8EB87241E21B2E200A3075D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8EB87261E21B2E200A3075D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +81,7 @@
 		A8EB87231E21B2E200A3075D /* PushNotifs */ = {
 			isa = PBXGroup;
 			children = (
+				A888F0D61E21BCEF002383DC /* PushNotifs.entitlements */,
 				A8EB87241E21B2E200A3075D /* AppDelegate.swift */,
 				A8EB87261E21B2E200A3075D /* ViewController.swift */,
 				A8EB87281E21B2E200A3075D /* Main.storyboard */,
@@ -128,6 +130,11 @@
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 3DKZWJ5854;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -341,6 +348,7 @@
 			baseConfigurationReference = 61E0A8886DB9240DAAD76D12 /* Pods-PushNotifs.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PushNotifs/PushNotifs.entitlements;
 				DEVELOPMENT_TEAM = 3DKZWJ5854;
 				INFOPLIST_FILE = PushNotifs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -355,6 +363,7 @@
 			baseConfigurationReference = 46FCAD5421E79254B51FB7A3 /* Pods-PushNotifs.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PushNotifs/PushNotifs.entitlements;
 				DEVELOPMENT_TEAM = 3DKZWJ5854;
 				INFOPLIST_FILE = PushNotifs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -383,6 +392,7 @@
 				A8EB87351E21B2E200A3075D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
